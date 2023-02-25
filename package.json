@@ -1,0 +1,31 @@
+{
+  "name": "vite-portfolio",
+  "homepage": "./",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && html-beautify dist/**/*.html",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.13",
+    "css-declaration-sorter": "^6.3.1",
+    "js-beautify": "^1.14.7",
+    "postcss": "^8.4.21",
+    "postcss-normalize-charset": "^5.1.0",
+    "postcss-sort-media-queries": "^4.3.0",
+    "sass": "^1.58.3",
+    "vite": "^4.1.0",
+    "vite-plugin-handlebars": "^1.6.0"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 5%",
+    "iOS >= 9.0",
+    "Android >= 5",
+    "Firefox ESR"
+  ]
+}
