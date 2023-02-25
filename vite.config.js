@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite';
 
-//import設定を追記
 import { resolve } from 'path';
+
+//import設定を追記
+import handlebars from 'vite-plugin-handlebars';
 
 // HTMLの複数出力を自動化する
 //./src配下のファイル一式を取得
@@ -25,9 +27,6 @@ for (let i = 0; i < htmlFileList.length; i++) {
   */
 }
 
-//import設定を追記
-import handlebars from 'vite-plugin-handlebars';
-
 //HTML上で出し分けたい各ページごとの情報
 const pageData = {
   '/index.html': {
@@ -41,9 +40,9 @@ const pageData = {
 };
 
 export default defineConfig({
+  base: './', //相対パスでビルドする
   root: './src', //開発ディレクトリ設定
   build: {
-    base: './', //相対パスでビルドする
     outDir: '../dist', //出力場所の指定
     rollupOptions: { //ファイル出力設定
       output: {
@@ -68,9 +67,9 @@ export default defineConfig({
       //生成オブジェクトを渡す
       input: inputFiles,
     },
-    /*
-    プラグインの設定を追加
-  */
+    css: {
+      devSourcemap: true,
+    },
   plugins: [
     handlebars({
       //コンポーネントの格納ディレクトリを指定
