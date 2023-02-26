@@ -73,7 +73,7 @@ export default defineConfig({
     css: {
       devSourcemap: true,
     },
-    sourcemap:true,
+    // sourcemap:true,
   },
   plugins: [
     handlebars({
