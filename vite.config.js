@@ -81,8 +81,6 @@ export default defineConfig({
       partialDirectory: resolve(__dirname, './src/components'),
       //各ページ情報の読み込み
       context(pagePath) {
-        console.log(pagePath);
-        console.log(pageData[pagePath]);
         return pageData[pagePath];
       },
     }),
