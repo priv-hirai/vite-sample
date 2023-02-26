@@ -42,6 +42,9 @@ const pageData = {
 export default defineConfig({
   base: './', //相対パスでビルドする
   root: './src', //開発ディレクトリ設定
+  server: {//npm run dev 発行時に自動でブラウザに立ち上げる
+    open: './',//URL指定
+  },
   build: {
     outDir: '../dist', //出力場所の指定
     rollupOptions: { //ファイル出力設定
@@ -70,15 +73,18 @@ export default defineConfig({
     css: {
       devSourcemap: true,
     },
+    sourcemap:true,
+  },
   plugins: [
     handlebars({
       //コンポーネントの格納ディレクトリを指定
       partialDirectory: resolve(__dirname, './src/components'),
       //各ページ情報の読み込み
       context(pagePath) {
+        console.log(pagePath);
+        console.log(pageData[pagePath]);
         return pageData[pagePath];
       },
     }),
   ],
-  },
 });
