@@ -1,13 +1,12 @@
-# Vite 環境構築
-
-## ■参考サイト
-https://coding-memo.work/development/1274/
+# Vite Webサイト制作用テンプレート
 
 ## コマンド
 ### npm run dev
 「npm run dev」で開発サーバが起動するようになります。
 ### npm run build
 「npm run build」でdist/ディレクトリに公開用のファイル一式が書き出されます。
+### npm run preview
+「npm run preview」で「npm run build」で生成したdistフォルダが正常に表示されているかローカルで確認できます。
 
 ## 想定しているディレクトリ構成
 ```
