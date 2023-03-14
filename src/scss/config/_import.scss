@@ -1,2 +1,6 @@
-@use "ress.scss" as *;
-@use "mixin.scss" as *;
+@charset "UTF-8";
+
+@forward "ress.scss";
+@forward "mixin.scss";
+@forward "responsive.scss";
+@forward "function.scss";

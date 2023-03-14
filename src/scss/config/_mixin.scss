@@ -1,2 +1,10 @@
+@charset "UTF-8";
 
-$black : #333;
+// hover
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}
