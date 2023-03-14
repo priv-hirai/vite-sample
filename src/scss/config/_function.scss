@@ -1,0 +1,15 @@
+@charset "UTF-8";
+@use "sass:math";
+
+// 共通の変数をここで定義
+// オレンジ
+$black : #333333;
+
+// font
+// $font: "Hiragino Sans", "ヒラギノ角ゴシック", "MS ゴシック", "MS Pゴシック", "MS PGothic", sans-serif;
+
+// px→rem 変換
+$baseFontSize: 16;
+@function rem($pixels) {
+    @return calc($pixels / $baseFontSize) * 1rem;
+}
