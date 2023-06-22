@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
-
-<head>
-  {{> meta}}
-</head>
-
-<body>
-  <!-- header.htmlの読み込み -->
-  {{> header}}
+{{> header}}
   <main>
-    <div class="top-contents">
-      <img class="top-image_vite" src="image/vite.png" />
-      <p class="top-text">index.html</p>
+    <div>
+      <img src="image/vite.png" />
     </div>
   </main>
-  <!-- 相対パスを修正 -->
-  <script type="module" src="./js/main.js"></script>
-</body>
-
-</html>
+{{> footer}}
