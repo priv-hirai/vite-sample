@@ -66,7 +66,7 @@ export default defineConfig({
           }
           return `assets/${extType}/[name][extname]`;
         },
-        chunkFileNames: 'assets/js/[name].js',
+        chunkFileNames: 'assets/js/main.js',// main.jsに固定
         entryFileNames: 'assets/js/[name].js',
       },
       //生成オブジェクトを渡す
