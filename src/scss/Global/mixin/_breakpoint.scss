@@ -1,10 +1,4 @@
-@charset "UTF-8";
-
-// ブレイクポイント
 $breakpoints: (
-  "ss": (
-    max-width: 399px,
-  ),
   "sm": (
     max-width: 576px,
   ),
@@ -17,10 +11,15 @@ $breakpoints: (
   "xl": (
     max-width: 1200px,
   ),
+  "xxl": (
+    max-width: 1400px,
+  ),
+  "xxxl": (
+    max-width: 1800px,
+  ),
 ) !default;
 
-// @mixinの定義
-@mixin media($breakpoint) {
+@mixin MQ($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media screen and #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
@@ -29,6 +28,6 @@ $breakpoints: (
 
   // マップ型で定義されていない値が呼び出された時はエラーを返す
   @else {
-    @error "指定されたブレークポイントは定義されていません。" + "指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}";
+    @error '指定されたブレークポイントは定義されていません。' + '指定できるブレークポイントは次のとおりです。 -> #{map-keys($breakpoints)}';
   }
 }

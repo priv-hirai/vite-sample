@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && html-beautify dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
+    "build": "rimraf dist && vite build && html-beautify dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
     "preview": "vite preview"
   },
   "devDependencies": {
@@ -16,6 +16,7 @@
     "postcss": "^8.4.21",
     "postcss-normalize-charset": "^5.1.0",
     "postcss-sort-media-queries": "^4.3.0",
+    "rimraf": "^5.0.1",
     "sass": "^1.58.3",
     "vite": "^4.1.0",
     "vite-plugin-handlebars": "^1.6.0"
