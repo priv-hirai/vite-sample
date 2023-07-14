@@ -29,18 +29,6 @@ for (let i = 0; i < htmlFileList.length; i++) {
 // マルチタイプページを作りたい場合は、下記に記述していく
 // inputFiles["test"] = resolve(__dirname, './src/test/index.html');
 
-//HTML上で出し分けたい各ページごとの情報
-const pageData = {
-  '/index.html': {
-    isHome: true,
-    title: 'Main Page',
-  },
-  '/list.html': {
-    isHome: false,
-    title: 'List Page',
-  },
-};
-
 export default defineConfig({
   base: './', //相対パスでビルドする
   root: './src', //開発ディレクトリ設定
@@ -75,7 +63,6 @@ export default defineConfig({
     css: {
       devSourcemap: true,
     },
-    // sourcemap:true,
   },
   plugins: [
     handlebars({
