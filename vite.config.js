@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite';
-
 import { resolve } from 'path';
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 //import設定を追記
 import handlebars from 'vite-plugin-handlebars';
@@ -26,8 +26,14 @@ for (let i = 0; i < htmlFileList.length; i++) {
     }
   */
 }
-// マルチタイプページを作りたい場合は、下記に記述していく
-// inputFiles["test"] = resolve(__dirname, './src/test/index.html');
+
+// ページ毎のデータを定義
+const pageData = {
+  '/index.html': {
+    // index.htmlの時に表示するtitleを設定
+    title: 'Main Page',
+  },
+};
 
 export default defineConfig({
   base: './', //相対パスでビルドする
@@ -68,6 +74,10 @@ export default defineConfig({
     handlebars({
       //コンポーネントの格納ディレクトリを指定
       partialDirectory: resolve(__dirname, './src/components'),
+      context(pagePath) {
+        return pageData[pagePath];
+      },
     }),
+    ViteMinifyPlugin({}),
   ],
 });

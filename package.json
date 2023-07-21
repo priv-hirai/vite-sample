@@ -28,5 +28,8 @@
     "iOS >= 9.0",
     "Android >= 5",
     "Firefox ESR"
-  ]
+  ],
+  "dependencies": {
+    "vite-plugin-minify": "^1.5.2"
+  }
 }
