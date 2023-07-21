@@ -21,3 +21,9 @@
 /* Utility (prefix: u-)
     ------------------------------------------------*/
 @use "Utility";
+
+/* tailwind.css
+    ------------------------------------------------*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
