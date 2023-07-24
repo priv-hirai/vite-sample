@@ -8,6 +8,10 @@
     "build": "rimraf dist && vite build && html-beautify dist/**/*.html && esbuild src/public/assets/js/*.js --bundle --minify --outdir=dist/assets/js/",
     "preview": "vite preview"
   },
+  "volta": {
+    "node": "18.12.1",
+    "npm": "8.15.0"
+  },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "autoprefixer": "^10.4.13",
