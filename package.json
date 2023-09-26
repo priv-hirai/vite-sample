@@ -27,11 +27,9 @@
     "vite-plugin-handlebars": "^1.6.0"
   },
   "browserslist": [
-    "last 3 versions",
-    "> 5%",
-    "iOS >= 9.0",
-    "Android >= 5",
-    "Firefox ESR"
+    "> 2% in JP",
+    "ios >= 15",
+    "not dead"
   ],
   "dependencies": {
     "vite-plugin-minify": "^1.5.2"
